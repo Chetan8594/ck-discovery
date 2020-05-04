@@ -1,0 +1,33 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web.client.RestTemplate: DEBUG
+    org.springframework.security.oauth: DEBUG
+    com.chetan.discovery: DEBUG
+
+
+info:
+  app:
+    name: Discovery
+    description : This is the discovery server for Chetan Kumar
+    version : 1.0.0
+
+eureka:
+  datacenter: main
+  environment: local
+  shouldFilterOnlyUpInstances: false
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+
+
